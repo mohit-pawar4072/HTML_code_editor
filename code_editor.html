@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Code Editor</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                background: #e1e1e1;
+            }
+            .header {
+                font-size: 1.5em;
+                text-align: center;
+                margin-top: 10px;
+            }
+            .container {
+                width: 100%;
+                height: 90vh;
+                display: inline-flex;
+            }
+            #editor {
+                width: 50%;
+                height: 100%;
+                margin: 10px;
+                padding: 5px;
+                background: #fff;
+                border: 2px solid #098ca3;
+            }
+            #viewer {
+                width: 50%;
+                height: 100%;
+                margin: 10px;
+                padding: 5px;
+                background: #fff;
+                border: 2px solid #098ca3;
+            }
+
+
+.footer hr{
+              border: none;
+              background: #b5b5b5;
+              height: 1px;
+              margin: 20px 0;
+}
+.copyright{
+              text-align: center;
+}
+        </style>
+    </head>
+    <body>
+        <div class="header"><b>Welcome To &#60;&#47;mohit&#62; Editor</b></div>
+        <div class="container">
+            <textarea id="editor" oninput="runf()"></textarea>
+            <iframe id="viewer"></iframe>
+        </div>
+        <div class="footer"></div>
+        <br><br><br>
+        <hr>
+          <p class="copyright">Copyright 2021 - $ Mohit Technical</p>
+    </div>
+        <script>
+            function runf(){
+                var code = document.getElementById("editor").value;
+                document.getElementById("viewer").srcdoc = code;
+            }
+        </script>
+    </body>
+</html>
